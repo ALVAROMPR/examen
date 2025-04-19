@@ -1,0 +1,59 @@
+
+<div class="usuarios-container">
+  <div class="agregar-usuario">
+    <h3>Agregar Nuevo Usuario</h3>
+    <form (ngSubmit)="agregarUsuario()">
+      <div>
+        <label for="nombre">Nombres:</label>
+        <input type="text" id="nombre" [(ngModel)]="nuevoUsuario.nombre" name="nombre" required />
+      </div>
+
+      <div>
+        <label for="apellido">Apellidos:</label>
+        <input type="text" id="apellido" [(ngModel)]="nuevoUsuario.apellido" name="apellido" required />
+      </div>
+
+      <div>
+        <label for="ci">Nro Carnet:</label>
+        <input type="text" id="ci" [(ngModel)]="nuevoUsuario.ci" name="ci" required />
+      </div>
+
+      <div>
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" [(ngModel)]="nuevoUsuario.correo" name="correo" required />
+      </div>
+
+      <button type="submit">Agregar Usuario</button>
+    </form>
+  </div>
+
+  <!-- Tabla de usuarios -->
+  <h2>Lista de Usuarios</h2>
+  <table *ngIf="usuarios.length > 0" class="tabla-usuarios">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>CI</th>
+        <th>Correo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.apellido }}</td>
+        <td>{{ usuario.ci }}</td>
+        <td>{{ usuario.correo }}</td>
+        <td>
+          <!-- Botón para eliminar un usuario -->
+          <button (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Mensaje si no hay usuarios -->
+  <p *ngIf="usuarios.length === 0">No hay usuarios registrados.</p>
+</div>
+

@@ -1,0 +1,34 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Registrar Nuevo Usuario</h2>
+  
+    <form [formGroup]="formUsuario" (ngSubmit)="onSubmit()">
+      <!-- Nombre -->
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" formControlName="nombre"> <!-- Cambio aquí -->
+      </div>
+    
+      <!-- Apellido -->
+      <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellido" formControlName="apellido"> <!-- Cambio aquí -->
+      </div>
+    
+      <!-- C.I. -->
+      <div class="mb-3">
+        <label for="ci" class="form-label">C.I.</label>
+        <input type="text" class="form-control" id="ci" formControlName="ci"> <!-- Cambio aquí -->
+      </div>
+    
+      <!-- Correo -->
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo</label>
+        <input type="email" class="form-control" id="correo" formControlName="correo"> <!-- Cambio aquí -->
+      </div>
+    
+      <!-- Botón de Enviar -->
+      <button type="submit" class="btn btn-primary" [disabled]="!formUsuario.valid">Registrar Usuario</button>
+    </form>
+    
+  </div>
+  

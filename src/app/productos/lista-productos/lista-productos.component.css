@@ -1,0 +1,124 @@
+.usuarios-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .agregar-usuario {
+    width: 400px;  /* Puedes ajustar el tamaño del formulario */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  label {
+    width: 35%; /* Ajusta el tamaño del label */
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .tabla-usuarios th, .tabla-usuarios td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .tabla-usuarios th {
+    background-color: #f4f4f4;
+  }
+  
+  p {
+    text-align: center;
+    color: #777;
+  }
+/*--------------------------------------------------------*/
+/* button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+} */
+  /*----------------------------------------------------*/
+  /* Ajusta la apariencia del input file y el botón */
+input[type="file"] {
+  display: none; /* Oculta el input por defecto */
+}
+
+button[type="button"] {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+button[type="button"].btn-rojo {
+  background-color: red; /* Rojo si no se ha seleccionado una imagen */
+  color: white;
+}
+
+button[type="button"].btn-azul {
+  background-color: #007bff; /* Azul si la imagen ha sido seleccionada */
+  color: white;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc; /* Deshabilitar el botón si no hay imagen */
+}
+
+button[type="submit"]:not(:disabled):hover {
+  background-color: #45a049;
+}

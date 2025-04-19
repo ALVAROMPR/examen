@@ -1,0 +1,78 @@
+.usuarios-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.agregar-usuario {
+  width: 400px;  /* Puedes ajustar el tamaño del formulario */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+label {
+  width: 35%; /* Ajusta el tamaño del label */
+  text-align: left;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4CAF50; /* Puedes cambiar a #007bff para azul */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049; /* O #0056b3 para azul */
+}
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-usuarios th, .tabla-usuarios td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.tabla-usuarios th {
+  background-color: #f4f4f4;
+}
+
+p {
+  text-align: center;
+  color: #777;
+}
